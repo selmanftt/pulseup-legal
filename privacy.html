@@ -4,148 +4,212 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Gizlilik Politikası — PulseUp</title>
-<link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 <style>
-  :root{--bg:#080810;--surface:#0f0f1a;--border:rgba(255,255,255,0.07);--accent:#FF6B35;--accent2:#7C3AED;--green:#34D399;--text:#e8e8f0;--muted:rgba(232,232,240,0.45)}
-  *{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}
-  body{background:var(--bg);color:var(--text);font-family:'Sora',sans-serif;font-size:15px;line-height:1.8}
-  body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;background:radial-gradient(ellipse 600px 400px at 10% 0%,rgba(255,107,53,.12) 0%,transparent 70%),radial-gradient(ellipse 500px 350px at 90% 20%,rgba(124,58,237,.10) 0%,transparent 70%)}
-  .wrap{position:relative;z-index:1;max-width:760px;margin:0 auto;padding:0 24px 80px}
-  header{padding:56px 0 48px;border-bottom:1px solid var(--border);margin-bottom:48px}
-  .logo{display:flex;align-items:center;gap:12px;margin-bottom:32px}
-  .logo-icon{width:42px;height:42px;background:linear-gradient(135deg,var(--accent),var(--accent2));border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:20px}
-  .logo-name{font-size:20px;font-weight:700}
-  h1{font-size:clamp(28px,5vw,40px);font-weight:800;letter-spacing:-.02em;margin-bottom:14px}
-  h1 span{background:linear-gradient(90deg,var(--accent),var(--accent2));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
-  .meta{font-size:13px;color:var(--muted)}
-  .callout{background:rgba(52,211,153,.06);border:1px solid rgba(52,211,153,.2);border-radius:12px;padding:18px 20px;margin-bottom:20px;display:flex;gap:14px}
-  .callout.warn{background:rgba(255,107,53,.06);border-color:rgba(255,107,53,.2)}
-  .callout p{color:rgba(232,232,240,.7);margin:0;font-size:14px}
-  .toc{background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:24px 28px;margin-bottom:48px}
-  .toc-title{font-size:11px;font-weight:700;letter-spacing:.12em;color:var(--muted);text-transform:uppercase;margin-bottom:16px}
-  .toc ol{list-style:none;counter-reset:toc;display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:8px}
-  .toc li{counter-increment:toc}
-  .toc a{display:flex;align-items:center;gap:10px;color:var(--muted);text-decoration:none;font-size:13px;transition:color .2s}
-  .toc a::before{content:counter(toc,decimal-leading-zero);font-size:11px;font-weight:700;color:var(--accent);opacity:.7;min-width:20px}
-  .toc a:hover{color:var(--text)}
-  section{margin-bottom:52px;scroll-margin-top:24px}
-  h2{font-size:20px;font-weight:700;margin-bottom:20px;display:flex;align-items:center;gap:12px}
-  .sn{font-size:11px;font-weight:700;color:var(--accent);background:rgba(255,107,53,.1);border:1px solid rgba(255,107,53,.2);border-radius:6px;padding:3px 8px}
-  p{color:var(--muted);margin-bottom:16px}p:last-child{margin-bottom:0}
-  ul{color:var(--muted);list-style:none;margin-bottom:16px}
-  li{display:flex;gap:12px;margin-bottom:10px;align-items:flex-start}
-  li::before{content:'→';color:var(--accent);font-size:13px;margin-top:2px;flex-shrink:0}
-  table{width:100%;border-collapse:collapse;margin-bottom:20px;font-size:14px}
-  th{text-align:left;font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);border-bottom:1px solid var(--border);padding:10px 14px}
-  td{padding:12px 14px;border-bottom:1px solid rgba(255,255,255,.04);color:rgba(232,232,240,.65);vertical-align:top}
-  tr:last-child td{border-bottom:none}td:first-child{color:var(--text);font-weight:500}
-  .contact-box{background:linear-gradient(135deg,rgba(255,107,53,.08),rgba(124,58,237,.08));border:1px solid var(--border);border-radius:20px;padding:32px;text-align:center;margin-top:60px}
-  .contact-box h3{font-size:20px;font-weight:700;margin-bottom:10px}
-  .contact-box p{font-size:14px;margin-bottom:20px}
-  .contact-email{display:inline-flex;align-items:center;gap:8px;background:rgba(255,107,53,.12);border:1px solid rgba(255,107,53,.3);color:var(--accent);padding:12px 24px;border-radius:50px;text-decoration:none;font-weight:600;font-size:14px}
-  footer{border-top:1px solid var(--border);padding-top:32px;margin-top:60px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
-  footer p{font-size:12px;color:var(--muted);margin:0}footer a{color:var(--accent);text-decoration:none}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#0D1117;color:#c9d1d9;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;line-height:1.7}
+.wrap{max-width:720px;margin:0 auto;padding:40px 24px 80px}
+.logo{display:flex;align-items:center;gap:10px;margin-bottom:12px}
+.logo-icon{width:40px;height:40px;background:linear-gradient(135deg,#00E676,#00BFA5);border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:20px}
+.logo span{font-size:20px;font-weight:800;color:#fff}
+h1{font-size:32px;font-weight:800;color:#fff;margin-bottom:8px}
+.meta{font-size:13px;color:#8b949e;margin-bottom:28px}
+.callout{background:rgba(0,230,118,.06);border:1px solid rgba(0,230,118,.15);border-radius:14px;padding:16px 20px;margin-bottom:32px;display:flex;gap:12px;align-items:flex-start}
+.callout-icon{font-size:20px}
+.callout p{font-size:14px;color:#8b949e}
+.toc-title{font-size:12px;font-weight:700;color:#8b949e;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:12px}
+.toc{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:36px}
+.toc a{background:#161b22;border:1px solid #30363d;padding:8px 14px;border-radius:10px;font-size:13px;color:#58a6ff;text-decoration:none;transition:.2s}
+.toc a:hover{background:#1f2937;border-color:#58a6ff}
+section{margin-bottom:36px}
+h2{font-size:20px;font-weight:700;color:#fff;margin-bottom:16px;display:flex;align-items:center;gap:10px}
+h2 .num{font-size:14px;color:#00E676;font-weight:800;background:rgba(0,230,118,.1);padding:4px 10px;border-radius:8px}
+table{width:100%;border-collapse:collapse;margin-bottom:12px}
+th{text-align:left;font-size:12px;color:#8b949e;text-transform:uppercase;letter-spacing:1px;padding:10px 12px;border-bottom:1px solid #30363d}
+td{padding:12px;font-size:14px;border-bottom:1px solid #21262d}
+.badge{display:inline-block;padding:3px 10px;border-radius:8px;font-size:11px;font-weight:600}
+.badge-req{background:rgba(0,230,118,.1);color:#00E676}
+.badge-opt{background:rgba(88,166,255,.1);color:#58a6ff}
+.badge-auto{background:rgba(255,215,64,.1);color:#FFD740}
+ul{padding-left:20px;margin-bottom:12px}
+li{margin-bottom:8px;font-size:14px}
+.lock{font-size:14px;color:#FFD740;background:rgba(255,215,64,.06);border:1px solid rgba(255,215,64,.15);border-radius:10px;padding:12px 16px;margin-top:12px}
+a{color:#58a6ff;text-decoration:none}
+a:hover{text-decoration:underline}
+.footer{text-align:center;padding:40px 0;border-top:1px solid #21262d;margin-top:40px}
+.footer p{font-size:13px;color:#484f58}
+.highlight-box{background:rgba(255,69,58,.06);border:1px solid rgba(255,69,58,.2);border-radius:14px;padding:16px 20px;margin:16px 0}
+.highlight-box h3{color:#FF453A;font-size:16px;margin-bottom:8px}
+.highlight-box p,.highlight-box li{font-size:14px;color:#c9d1d9}
+.info-box{background:rgba(88,166,255,.06);border:1px solid rgba(88,166,255,.15);border-radius:14px;padding:16px 20px;margin:16px 0}
+.info-box h3{color:#58a6ff;font-size:16px;margin-bottom:8px}
+.info-box p,.info-box li{font-size:14px;color:#c9d1d9}
 </style>
 </head>
 <body>
 <div class="wrap">
-  <header>
-    <div class="logo"><div class="logo-icon">⚡</div><span class="logo-name">PulseUp</span></div>
-    <h1>Gizlilik <span>Politikası</span></h1>
-    <div class="meta">Son güncelleme: 15 Mart 2026</div>
-  </header>
+
+  <div class="logo">
+    <div class="logo-icon">⚡</div>
+    <span>PulseUp</span>
+  </div>
+  <h1>Gizlilik Politikası</h1>
+  <div class="meta">Son güncelleme: 27 Mart 2026</div>
 
   <div class="callout">
-    <span style="font-size:18px;flex-shrink:0">💡</span>
-    <p>Verilerinizi satmıyoruz, üçüncü taraflarla paylaşmıyoruz. Tüm uygulama verileri yalnızca cihazınızda saklanır.</p>
+    <div class="callout-icon">💡</div>
+    <p>Verilerinizi satmıyoruz. Uygulama verileri cihazınızda saklanır. AI koç özelliği kullanıldığında, sağlık verileriniz kişiselleştirilmiş öneriler için Anthropic'in Claude AI servisine gönderilir. Bu paylaşım, açık onayınızla gerçekleşir.</p>
   </div>
 
-  <nav class="toc">
-    <div class="toc-title">İçindekiler</div>
-    <ol>
-      <li><a href="#s1">Toplanan Veriler</a></li><li><a href="#s2">Verilerin Kullanımı</a></li>
-      <li><a href="#s3">Veri Güvenliği</a></li><li><a href="#s4">HealthKit</a></li>
-      <li><a href="#s5">Üçüncü Taraflar</a></li><li><a href="#s6">Çocukların Gizliliği</a></li>
-      <li><a href="#s7">Haklarınız</a></li><li><a href="#s8">Değişiklikler</a></li>
-    </ol>
-  </nav>
+  <div class="toc-title">İçindekiler</div>
+  <div class="toc">
+    <a href="#s1">Toplanan Veriler</a>
+    <a href="#s2">Verilerin Kullanımı</a>
+    <a href="#s3">AI Veri Paylaşımı</a>
+    <a href="#s4">Veri Güvenliği</a>
+    <a href="#s5">HealthKit</a>
+    <a href="#s6">Üçüncü Taraflar</a>
+    <a href="#s7">Çocukların Gizliliği</a>
+    <a href="#s8">Haklarınız</a>
+    <a href="#s9">Değişiklikler</a>
+  </div>
 
-  <section id="s1"><h2><span class="sn">01</span> Toplanan Veriler</h2>
+  <!-- 01 -->
+  <section id="s1">
+    <h2><span class="num">01</span> Toplanan Veriler</h2>
     <table>
       <tr><th>Veri Türü</th><th>Açıklama</th><th>Zorunluluk</th></tr>
-      <tr><td>Profil Bilgileri</td><td>Ad, yaş, boy, kilo, cinsiyet, aktivite seviyesi</td><td>İsteğe bağlı</td></tr>
-      <tr><td>Sağlık Verileri</td><td>Adım sayısı, uyku süresi, kalp atışı (HealthKit)</td><td>İzinli</td></tr>
-      <tr><td>Uygulama Aktivitesi</td><td>Check-in geçmişi, alışkanlık verileri, journal</td><td>Zorunlu</td></tr>
-      <tr><td>Cihaz Bilgisi</td><td>iOS versiyonu, cihaz modeli</td><td>Otomatik</td></tr>
+      <tr><td>Profil Bilgileri</td><td>Ad, yaş, boy, kilo, cinsiyet, aktivite seviyesi</td><td><span class="badge badge-opt">İsteğe bağlı</span></td></tr>
+      <tr><td>Sağlık Verileri</td><td>Adım sayısı, uyku süresi, kalp atışı (HealthKit)</td><td><span class="badge badge-opt">İzinli</span></td></tr>
+      <tr><td>Uygulama Aktivitesi</td><td>Check-in geçmişi, alışkanlık verileri, journal, ruh hali</td><td><span class="badge badge-req">Zorunlu</span></td></tr>
+      <tr><td>Cihaz Bilgisi</td><td>iOS versiyonu, cihaz modeli</td><td><span class="badge badge-auto">Otomatik</span></td></tr>
     </table>
-    <p>Tüm veriler <strong>yalnızca cihazınızda</strong> saklanır, harici sunuculara gönderilmez.</p>
+    <p style="font-size:13px;color:#8b949e">Tüm veriler öncelikli olarak cihazınızda yerel olarak saklanır.</p>
   </section>
 
-  <section id="s2"><h2><span class="sn">02</span> Verilerin Kullanımı</h2>
+  <!-- 02 -->
+  <section id="s2">
+    <h2><span class="num">02</span> Verilerin Kullanımı</h2>
     <ul>
       <li>Kişiselleştirilmiş wellness ve sağlık önerileri sunmak</li>
-      <li>AI koç özelliğini geliştirmek</li>
+      <li>AI koç özelliğini çalıştırmak (kullanıcı onayı ile)</li>
+      <li>Haftalık sağlık raporu oluşturmak (kullanıcı onayı ile)</li>
       <li>Streak, rozet ve ilerleme takibini sağlamak</li>
       <li>Uygulama performansını artırmak</li>
     </ul>
-    <div class="callout warn"><span style="font-size:18px;flex-shrink:0">🔒</span>
-      <p>Verilerinizi <strong>asla</strong> reklam amaçlı kullanmıyor, satmıyor veya paylaşmıyoruz.</p>
-    </div>
+    <div class="lock">🔒 Verilerinizi asla reklam amaçlı kullanmıyor, satmıyor veya izinsiz paylaşmıyoruz.</div>
   </section>
 
-  <section id="s3"><h2><span class="sn">03</span> Veri Güvenliği</h2>
+  <!-- 03 - AI Veri Paylaşımı -->
+  <section id="s3">
+    <h2><span class="num">03</span> AI Veri Paylaşımı ve Üçüncü Taraf AI Servisi</h2>
+
+    <div class="highlight-box">
+      <h3>⚠️ Önemli: AI Koç Özelliğinde Veri Paylaşımı</h3>
+      <p>PulseUp'ın AI koç ve haftalık rapor özellikleri, kişiselleştirilmiş sağlık önerileri sunmak için <strong>Anthropic</strong> şirketinin <strong>Claude AI</strong> yapay zeka servisini kullanmaktadır. Bu özellikleri kullandığınızda, belirli sağlık verileriniz Anthropic'in sunucularına gönderilir.</p>
+    </div>
+
+    <h3 style="color:#fff;font-size:16px;margin:20px 0 12px">Paylaşılan Veri Türleri</h3>
+    <p style="font-size:14px;margin-bottom:12px">AI koç veya haftalık rapor özelliğini kullandığınızda aşağıdaki veriler Anthropic'e gönderilir:</p>
+    <table>
+      <tr><th>Veri</th><th>Açıklama</th></tr>
+      <tr><td>Uyku verileri</td><td>Uyku süresi ve kalitesi</td></tr>
+      <tr><td>Enerji seviyesi</td><td>Günlük enerji ve ruh hali verileri</td></tr>
+      <tr><td>Kalp atış hızı</td><td>Günlük kalp atış hızı (HealthKit'ten)</td></tr>
+      <tr><td>Adım sayısı</td><td>Günlük adım verileri</td></tr>
+      <tr><td>Alışkanlıklar</td><td>Alışkanlık tamamlama ve streak bilgileri</td></tr>
+      <tr><td>Su tüketimi</td><td>Günlük su içme takibi</td></tr>
+      <tr><td>Profil bilgileri</td><td>Yaş, BMI, fitness hedefleri</td></tr>
+      <tr><td>Sohbet geçmişi</td><td>AI koç ile yapılan son 8 mesaj</td></tr>
+    </table>
+
+    <h3 style="color:#fff;font-size:16px;margin:20px 0 12px">Veri Alıcısı</h3>
+    <div class="info-box">
+      <h3>Anthropic, PBC</h3>
+      <p>Verileriniz, güvenli HTTPS bağlantısı üzerinden Anthropic'in Claude AI modeline gönderilir. Anthropic, verileri yalnızca AI yanıtı oluşturmak için işler.</p>
+      <ul style="margin-top:8px">
+        <li>Anthropic Gizlilik Politikası: <a href="https://www.anthropic.com/privacy" target="_blank">anthropic.com/privacy</a></li>
+        <li>Veri, Anthropic'in ABD merkezli sunucularında işlenir</li>
+      </ul>
+    </div>
+
+    <h3 style="color:#fff;font-size:16px;margin:20px 0 12px">Onay Mekanizması</h3>
     <ul>
-      <li>Tüm veriler cihazınızda yerel olarak saklanır</li>
-      <li>iCloud yedeklemesi Apple şifreleme standartlarına tabidir</li>
-      <li>AI koç için Anthropic API kullanılır; içerik anonim bağlamdır</li>
-      <li>Satın alma işlemleri Apple StoreKit üzerinden gerçekleşir</li>
+      <li><strong>Açık onay gereklidir:</strong> AI koç veya haftalık rapor özelliğini ilk kez kullanmadan önce, uygulama size hangi verilerin paylaşılacağını ve kime gönderileceğini açıklayan bir onay ekranı gösterir.</li>
+      <li><strong>Onay vermeden kullanılamaz:</strong> Onay vermeden AI özelliklerini kullanamazsınız.</li>
+      <li><strong>İstediğiniz zaman iptal:</strong> AI veri paylaşım onayınızı istediğiniz zaman geri çekebilirsiniz.</li>
+    </ul>
+
+    <h3 style="color:#fff;font-size:16px;margin:20px 0 12px">Veri Koruma</h3>
+    <ul>
+      <li>Tüm veri aktarımı HTTPS şifreleme ile korunur</li>
+      <li>Veriler sunucularımızda kalıcı olarak saklanmaz</li>
+      <li>Verileriniz asla üçüncü taraflara satılmaz</li>
+      <li>Anthropic, verilerinizi yalnızca AI yanıtı oluşturmak için kullanır</li>
     </ul>
   </section>
 
-  <section id="s4"><h2><span class="sn">04</span> HealthKit & Sağlık Verileri</h2>
+  <!-- 04 -->
+  <section id="s4">
+    <h2><span class="num">04</span> Veri Güvenliği</h2>
+    <ul>
+      <li>Tüm veriler cihazınızda yerel olarak saklanır</li>
+      <li>iCloud yedeklemesi Apple şifreleme standartlarına tabidir</li>
+      <li>AI koç için Anthropic Claude AI kullanılır; veriler yalnızca kullanıcı onayı ile gönderilir</li>
+      <li>Satın alma işlemleri Apple StoreKit üzerinden gerçekleşir</li>
+      <li>Tüm sunucu iletişimi HTTPS şifreleme ile korunur</li>
+    </ul>
+  </section>
+
+  <!-- 05 -->
+  <section id="s5">
+    <h2><span class="num">05</span> HealthKit & Sağlık Verileri</h2>
     <ul>
       <li>Yalnızca kişiselleştirilmiş öneriler için kullanılır</li>
-      <li>Hiçbir zaman üçüncü taraflarla paylaşılmaz</li>
+      <li>AI koç özelliği kullanıldığında, HealthKit verileri (adım, uyku, kalp atışı) Anthropic'e gönderilir (kullanıcı onayı ile)</li>
       <li>Reklam veya sigorta amaçlı kullanılmaz</li>
       <li>Ayarlar → Sağlık → Veri Erişimi'nden istediğiniz zaman iptal edebilirsiniz</li>
     </ul>
   </section>
 
-  <section id="s5"><h2><span class="sn">05</span> Üçüncü Taraflar</h2>
+  <!-- 06 -->
+  <section id="s6">
+    <h2><span class="num">06</span> Üçüncü Taraflar</h2>
     <table>
       <tr><th>Hizmet</th><th>Amaç</th><th>Politika</th></tr>
-      <tr><td>Apple StoreKit</td><td>Satın alma işlemleri</td><td>apple.com/privacy</td></tr>
-      <tr><td>Anthropic Claude API</td><td>AI koç yanıtları</td><td>anthropic.com/privacy</td></tr>
-      <tr><td>Apple HealthKit</td><td>Sağlık verisi okuma</td><td>apple.com/privacy</td></tr>
+      <tr><td>Apple StoreKit</td><td>Satın alma işlemleri</td><td><a href="https://www.apple.com/privacy/" target="_blank">apple.com/privacy</a></td></tr>
+      <tr><td>Anthropic Claude AI</td><td>AI koç yanıtları ve haftalık rapor (kullanıcı onayı ile sağlık verileri gönderilir)</td><td><a href="https://www.anthropic.com/privacy" target="_blank">anthropic.com/privacy</a></td></tr>
+      <tr><td>Apple HealthKit</td><td>Sağlık verisi okuma</td><td><a href="https://www.apple.com/privacy/" target="_blank">apple.com/privacy</a></td></tr>
     </table>
   </section>
 
-  <section id="s6"><h2><span class="sn">06</span> Çocukların Gizliliği</h2>
+  <!-- 07 -->
+  <section id="s7">
+    <h2><span class="num">07</span> Çocukların Gizliliği</h2>
     <p>PulseUp 13 yaş altı bireylere yönelik değildir. Bu yaş grubundan bilerek veri toplamıyoruz.</p>
   </section>
 
-  <section id="s7"><h2><span class="sn">07</span> Haklarınız</h2>
+  <!-- 08 -->
+  <section id="s8">
+    <h2><span class="num">08</span> Haklarınız</h2>
     <ul>
       <li><strong>Erişim:</strong> Hangi verilerinizin tutulduğunu öğrenebilirsiniz</li>
       <li><strong>Silme:</strong> Tüm verilerinizi silebilirsiniz</li>
       <li><strong>Düzeltme:</strong> Yanlış verilerin düzeltilmesini talep edebilirsiniz</li>
+      <li><strong>AI onayını geri çekme:</strong> AI veri paylaşım onayınızı uygulama içinden istediğiniz zaman iptal edebilirsiniz</li>
     </ul>
   </section>
 
-  <section id="s8"><h2><span class="sn">08</span> Değişiklikler</h2>
+  <!-- 09 -->
+  <section id="s9">
+    <h2><span class="num">09</span> Değişiklikler</h2>
     <p>Politikayı güncelleyebiliriz. Önemli değişikliklerde uygulama içi bildirim göndeririz.</p>
   </section>
 
-  <div class="contact-box">
-    <h3>Sorularınız mı var?</h3>
-    <p>Gizlilik konusunda her zaman yardımcı olmaktan memnuniyet duyarız.</p>
-    <a href="mailto:privacy@pulseup.app" class="contact-email">✉️ privacy@pulseup.app</a>
+  <div class="footer">
+    <p>Sorularınız mı var? ✉️ <a href="mailto:privacy@pulseup.app">privacy@pulseup.app</a></p>
+    <p style="margin-top:12px">© 2026 PulseUp. Tüm hakları saklıdır. <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">Kullanım Şartları →</a></p>
   </div>
 
-  <footer>
-    <p>© 2026 PulseUp. Tüm hakları saklıdır.</p>
-    <p><a href="terms.html">Kullanım Şartları →</a></p>
-  </footer>
 </div>
 </body>
 </html>
